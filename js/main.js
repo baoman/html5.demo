@@ -268,11 +268,6 @@ var car2 = {
 
         // move事件
         car2._handleEvent('move');
-		
-		
-		
-		
-		
  	},
 
  	// page触摸移动判断方向
@@ -710,7 +705,7 @@ var car2 = {
  	// 声音事件绑定
  	audio_addEvent : function(){
  		if(car2._audioNode.length<=0) return;
-
+		car2.audio_contorl();
  		// 声音按钮点击事件
  		var txt = car2._audioNode.find('.txt_audio'),
  			time_txt = null;
@@ -745,7 +740,7 @@ var car2 = {
  			txt.removeClass('z-move z-hide');
  			time_txt = setTimeout(function(){
  				txt.addClass('z-move').addClass('z-hide');
- 			},1000)
+ 			},1000);
  		}
  	},
 
@@ -976,7 +971,7 @@ var car2 = {
 						if(goon){
 							for(var i =0;i<$(".m-page").size();i++){
 								var page = $(".m-page").eq(i);
-								if($(".m-page").find('.lazy-img').length==0) continue
+								if($(".m-page").find('.lazy-img').length==0) continue;
 								else{
 									car2.lazy_change(page,true);
 								}
@@ -1582,25 +1577,8 @@ var car2 = {
 		// 禁止滑动
 		// this._scrollStop();
 
-		// 图片预先加载
-		//$('<img />').attr('src',$('#r-cover').val());
-		$('<img />').attr('src',$('.m-fengye').find('.page-con').attr('data-src'));
-
-
 		$(window).on('load',function(){
 			setTimeout(function(){
-				// loading隐藏
-				$('#load').addClass('f-hide');
-				// 显示正文
-				$('#pageload').removeClass('f-hide');
-
-				// 显示封面内容
-				setTimeout(function(){
-					$('.translate-back').removeClass('f-hide');
-					$('.m-fengye').removeClass('f-hide');
-					car2.height_auto(car2._page.eq(car2._pageNow),'false');
-				},1000);
-
 				// media初始化
 				car2.media_init();
 

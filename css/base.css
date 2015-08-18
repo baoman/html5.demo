@@ -24,18 +24,112 @@
     -moz-animation: start 1.5s infinite ease-in-out;
     animation: start 1.5s infinite ease-in-out;
 }
+
 @-webkit-keyframes start {
-    0%,30% {opacity: 0;-webkit-transform: translate(0,10px);}
-    60% {opacity: 1;-webkit-transform: translate(0,0);}
-    100% {opacity: 0;-webkit-transform: translate(0,-8px);}
+    0%, 30% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
 }
+
 @-moz-keyframes start {
-    0%,30% {opacity: 0;-moz-transform: translate(0,10px);}
-    60% {opacity: 1;-moz-transform: translate(0,0);}
-    100% {opacity: 0;-moz-transform: translate(0,-8px);}
+    0%, 30% {
+        opacity: 0;
+        -moz-transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        -moz-transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        -moz-transform: translate(0, -8px);
+    }
 }
+
 @keyframes start {
-    0%,30% {opacity: 0;transform: translate(0,10px);}
-    60% {opacity: 1;transform: translate(0,0);}
-    100% {opacity: 0;transform: translate(0,-8px);}
+    0%, 30% {
+        opacity: 0;
+        transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(0, -8px);
+    }
+}
+
+.m-fengye {
+    background-image: url('../images/fengye/pic-bg.jpg');
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.m-fengye-con {
+    position: absolute;
+    width: 84%;
+    left: 8%;
+    top: 50%;
+    height: 280px;
+    margin-top: -140px;
+    text-align: center;
+    font-family: "Times New Roman", Times, serif;
+    background: rgba(181, 181, 181, .4);
+    border-radius: 5px;
+}
+
+.marry-user {
+    color: #000;
+    font-size: 2em;
+    margin-top: 40px;
+}
+
+.marry-txt {
+    font-size: 1.5rem;
+    margin-top: 30px;
+    color: #FF7AAB;
+}
+
+.marry-desc {
+    font-size: 1.25rem;
+    margin-top: 50px;
+    color: #6F0514;
+}
+
+/* 囍 */
+.spinner {
+    color: #FF7AAB;
+    font-family: "隶书";
+    font-size: 65px;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    margin: 0 10px;
+    -webkit-animation: rotateplane 1.2s infinite ease-in-out;
+    -webkit-animation-direction: alternate;
+
+}
+
+@-webkit-keyframes rotateplane {
+    0% {
+        -webkit-transform: perspective(120px);
+    }
+    50% {
+        -webkit-transform: perspective(120px) rotateY(180deg);
+    }
+    100% {
+        -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
+    }
+
 }

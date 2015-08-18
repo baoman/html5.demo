@@ -148,7 +148,7 @@
       .css({
         'height'   : opts.steamHeight,
         'width'    : opts.steamWidth,
-        'left'     : 60,
+        'left'     : 45,
         'top'      : -50,
         'position' : 'absolute',
         'overflow' : 'hidden',
@@ -218,7 +218,7 @@
       // 左右浮动的范围值
       var left = rand( -10 , 10 );
       left += parseInt($coffeeSteamBox.css('left'));
-      if(left>=54) left=54;
+      if(left>=45) left=45;
       else if(left<=34) left=34;
 
       // 移动的函数

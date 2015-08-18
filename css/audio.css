@@ -4,9 +4,9 @@
 */
 .u-audio {
     position: fixed;
-    top: 40px;
+    top: 110px;
     right: 0;
-    width: 132px;
+    width: 100px;
     height: 73px;
     z-index: 200;
 }
@@ -22,7 +22,7 @@
 
 .u-audio .btn_audio {
     width: 100%;
-    padding-top: 29px;
+    padding-top: 10px;
     height: 44px;
 }
 
@@ -35,8 +35,7 @@
 }
 
 .u-audio .btn_audio strong {
-    width: 57px;
-    font-size: 24px;
+    font-size: 0.875rem;
     color: #fff;
     opacity: 1;
 }
@@ -44,7 +43,7 @@
 .u-audio .btn_audio .audio_open {
     position: absolute;
     bottom: 0;
-    left: 56px;
+    left: 40px;
     width: 44px;
 }
 
