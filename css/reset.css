@@ -1,0 +1,24 @@
+html, body, div {
+    margin: 0;
+    padding: 0;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+input, select, textarea {
+    font-family: "微软雅黑";
+    font-size: 30px;
+    color: gray;
+}
+/*声音*/
+.coffee-steam-box { display: none; }
+.f-ofh {overflow: hidden; height: 100%!important; } /*隐藏内容-overflow-hidden*/
+.f-hide { display: none!important; } /*隐藏内容*/
+.f-tc { text-align: center; }
+.f-tr { text-align: right; }
+.f-fl { float: left; }
+.f-fr { float: right; }
+.f-fixed { position: fixed; }
+.f-cur { cursor: pointer; }
+.f-show {display: block;}
+/*bg-background*/
+.s-bg-ddd { background: #ddd; }
