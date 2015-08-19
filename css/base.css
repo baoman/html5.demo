@@ -1,77 +1,16 @@
 /**
-* 箭头指示元件
-* -u-arrow
+* 单页面page模块
+* -m-page
 */
-.u-arrow {
-    position: fixed;
-    bottom: 30px;
-    left: 50%;
-    z-index: 150;
-    width: 80px;
-    height: 80px;
-    margin-left: -39px;
-}
-
-.u-arrow p {
+.m-page {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    margin: -14px 0 0 -25px;
-    width: 50px;
-    height: 28px;
-    background-position: 0 -82px;
-    -webkit-animation: start 1.5s infinite ease-in-out;
-    -moz-animation: start 1.5s infinite ease-in-out;
-    animation: start 1.5s infinite ease-in-out;
-}
-
-@-webkit-keyframes start {
-    0%, 30% {
-        opacity: 0;
-        -webkit-transform: translate(0, 10px);
-    }
-    60% {
-        opacity: 1;
-        -webkit-transform: translate(0, 0);
-    }
-    100% {
-        opacity: 0;
-        -webkit-transform: translate(0, -8px);
-    }
-}
-
-@-moz-keyframes start {
-    0%, 30% {
-        opacity: 0;
-        -moz-transform: translate(0, 10px);
-    }
-    60% {
-        opacity: 1;
-        -moz-transform: translate(0, 0);
-    }
-    100% {
-        opacity: 0;
-        -moz-transform: translate(0, -8px);
-    }
-}
-
-@keyframes start {
-    0%, 30% {
-        opacity: 0;
-        transform: translate(0, 10px);
-    }
-    60% {
-        opacity: 1;
-        transform: translate(0, 0);
-    }
-    100% {
-        opacity: 0;
-        transform: translate(0, -8px);
-    }
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .m-fengye {
-    background-image: url('../images/fengye/pic-bg.jpg');
+    background-image: url('../images/pic-bg.jpg');
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -132,4 +71,20 @@
         -webkit-transform: perspective(120px) rotateY(180deg) rotateX(180deg);
     }
 
+}
+.page-2 {
+    background: #ABB395;
+}
+.txt {
+    position: absolute;
+    width: 80%;
+    left: 10%;
+    text-align: center;
+    color: #FF7AAB;
+    padding: 10px 0;
+    line-height: 1;
+    font-size: 1.25rem;
+}
+#img {
+    height: 100%;
 }

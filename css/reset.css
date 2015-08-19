@@ -9,16 +9,89 @@ input, select, textarea {
     font-size: 30px;
     color: gray;
 }
+
 /*声音*/
-.coffee-steam-box { display: none; }
-.f-ofh {overflow: hidden; height: 100%!important; } /*隐藏内容-overflow-hidden*/
-.f-hide { display: none!important; } /*隐藏内容*/
-.f-tc { text-align: center; }
-.f-tr { text-align: right; }
-.f-fl { float: left; }
-.f-fr { float: right; }
-.f-fixed { position: fixed; }
-.f-cur { cursor: pointer; }
-.f-show {display: block;}
-/*bg-background*/
-.s-bg-ddd { background: #ddd; }
+.coffee-steam-box {
+    display: none;
+}
+
+.f-ofh {
+    overflow: hidden;
+    height: 100% !important;
+}
+
+/*隐藏内容-overflow-hidden*/
+.f-hide {
+    display: none !important;
+}
+
+/*隐藏内容*/
+.f-tc {
+    text-align: center;
+}
+
+.f-tr {
+    text-align: right;
+}
+
+.f-fl {
+    float: left;
+}
+
+.f-fr {
+    float: right;
+}
+
+.f-fixed {
+    position: fixed;
+}
+
+.f-cur {
+    cursor: pointer;
+}
+
+.f-show {
+    display: block;
+}
+
+/**
+* 箭头指示元件
+* -u-arrow
+*/
+.u-arrow {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    z-index: 150;
+    width: 80px;
+    height: 80px;
+    margin-left: -39px;
+}
+
+.u-arrow p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -14px 0 0 -25px;
+    width: 50px;
+    height: 28px;
+    background-position: 0 -82px;
+    -webkit-animation: start 1.5s infinite ease-in-out;
+    -moz-animation: start 1.5s infinite ease-in-out;
+    animation: start 1.5s infinite ease-in-out;
+}
+
+@-webkit-keyframes start {
+    0%, 30% {
+        opacity: 0;
+        -webkit-transform: translate(0, 10px);
+    }
+    60% {
+        opacity: 1;
+        -webkit-transform: translate(0, 0);
+    }
+    100% {
+        opacity: 0;
+        -webkit-transform: translate(0, -8px);
+    }
+}
