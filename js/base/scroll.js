@@ -1,21 +1,10 @@
 (function () {
-
-    window.onload = function () {
-        //$('#loading').hide();
-        layer();
-        //回顶部
-        $("#top").on("tap", function () {
-            pageIndex = 1;
-            $(".page-1").addClass('page-current').removeClass("f-hide").siblings().removeClass("page-current").addClass("hide");
-            $(".page-1").find("img").removeClass("hide");
-        });
-    }
     var pageIndex = 1,
-        pageTotal = $('.m-page').length,
+        pageTotal = $('.page').length,
         towards = {up: 1, right: 2, down: 3, left: 4},
         isAnimating = false;
 
-//禁用手机默认的触屏滚动行为
+    //禁用手机默认的触屏滚动行为
     document.addEventListener('touchmove', function (event) {
         event.preventDefault();
     }, false);
@@ -44,7 +33,6 @@
     })
 
     function pageMove(tw) {
-        $(".flotation").css({"top": "100%", "opacity": 0});
         var lastPage;
         if (tw == '1') {
             if (pageIndex == 1) {
@@ -75,7 +63,7 @@
                 break;
         }
         isAnimating = true;
-        $(nowPage).removeClass("f-hide");
+        $(nowPage).removeClass("hide");
 
         $(lastPage).addClass(outClass);
         $(nowPage).addClass(inClass);
@@ -83,44 +71,13 @@
         setTimeout(function () {
             $(lastPage).removeClass('page-current');
             $(lastPage).removeClass(outClass);
-            $(lastPage).addClass("f-hide");
-            $(lastPage).find("img").addClass("f-hide");
+            $(lastPage).addClass("hide");
+            $(lastPage).find("img").addClass("hide");
 
             $(nowPage).addClass('page-current');
             $(nowPage).removeClass(inClass);
-            $(nowPage).find("img").removeClass("f-hide");
-            layer();
+            $(nowPage).find("img").removeClass("hide");
             isAnimating = false;
         }, 600);
-
     }
-
-    function layer() {
-        var closeFlag = false;
-        var $btn = $(".managebtn");
-        if ($(".page-current").hasClass("page-1")) {//第一页
-            $btn.find(".top").hide();
-            $btn.css({
-                "height": "170px",
-                "margin-top": "-85px"
-            });
-        } else {
-            $btn.find(".top").show();
-            $btn.css({
-                "height": "220px",
-                "margin-top": "-110px"
-            });
-        }
-        $(".close").on("tap", function () {
-            $btn.css({"margin-right": "-90px", "-webkit-animation": "leftToRight 1s linear 1"});
-            closeFlag = true;
-        });
-        window.setInterval(function () {
-            if (closeFlag) {
-                $btn.css({"margin-right": 0, "-webkit-animation": "RightToLeft 1s linear 1"});
-                closeFlag = false;
-            }
-        }, 8000);
-    }
-
 })();

@@ -45,18 +45,23 @@
     bottom: 0;
     left: 40px;
     width: 44px;
+    transform-style: preserve-3d;
+    -webkit-animation:  img-rotate 1.5s linear infinite;
 }
-
+@-webkit-keyframes img-rotate {
+    from{
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+        -webkit-transform: rotate(360deg);
+    }
+}
 .u-audio .btn_audio strong.z-hide {
     opacity: 0;
 }
 
 .u-audio .btn_audio strong.z-move {
     -webkit-transition: opacity 0.5s;
-    -moz-transition: opacity 0.5s;
-    -ms-transition: opacity 0.5s;
-    -o-transition: opacity 0.5s;
-    transition: opacity 0.5s;
 }
 
 .u-audio.z-low {

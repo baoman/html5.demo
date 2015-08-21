@@ -21,7 +21,7 @@ input, select, textarea {
 }
 
 /*隐藏内容-overflow-hidden*/
-.f-hide {
+.hide {
     display: none !important;
 }
 

@@ -82,15 +82,15 @@ var car2 = {
         }
     },
     // 地图自定义绑定事件
-    mapAddEventHandler	 : function(obj,eventType,fn,option){
+    mapAddEventHandler: function (obj, eventType, fn, option) {
         var fnHandler = fn;
-        if(!car2._isOwnEmpty(option)){
-            fnHandler = function(e){
+        if (!car2._isOwnEmpty(option)) {
+            fnHandler = function (e) {
                 fn.call(this, option);  //继承监听函数,并传入参数以初始化;
             }
         }
-        obj.each(function(){
-            $(this).on(eventType,fnHandler);
+        obj.each(function () {
+            $(this).on(eventType, fnHandler);
         })
     },
     //点击地图按钮显示地图
@@ -293,7 +293,6 @@ var car2 = {
     },
 
 
-
     //处理声音和动画的切换
     media_control: function () {
         if (!car2._audio) return;
@@ -369,17 +368,58 @@ var car2 = {
 
         if (car2._weixin) $(document.body).wx(option_wx);
     },
+    // 图片预加载
+    preLoadImg: function () {
+        var imgarr = new Array();
+        imgarr[0] = "/demo/images/pic-bg.jpg";
+        imgarr[1] = "/demo/images/pic1.jpg";
+        imgarr[2] = "/demo/images/pic2.jpg";
+        imgarr[3] = "/demo/images/pic3.jpg";
+        imgarr[4] = "/demo/images/pic4.jpg";
+        imgarr[5] = "/demo/images/pic5.jpg";
+        imgarr[6] = "/demo/images/pic6.jpg";
+        imgarr[7] = "/demo/images/pic7.jpg";
+        for (var i = 0; i < imgarr.length - 1; i++) {
+            var img = new Image();
+            img.src = imgarr[i];
+        }
+    },
     // 对象初始化
     init: function () {
+        // loading执行一次
+        var loading_time = new Date().getTime();
         $(window).on('load', function () {
-            // media初始化
-            car2.media_init();
-            // 插件加载
-            car2.plugin();
+            car2.preLoadImg();
+            var now = new Date().getTime();
+            var loading_end = false;
+            var time;
+            var time_del = now - loading_time;
 
-            $('.p-ct').height($(window).height());
-            $('.m-page').height($(window).height());
-            $('.translate-back').height($(window).height());
+            if (time_del >= 500) {
+                loading_end = true;
+            }
+
+            if (loading_end) {
+                time = 0;
+            } else {
+                time = 500 - time_del;
+            }
+            // loading完成后请求
+            setTimeout(function () {
+                setTimeout(function () {
+                    $('#load').addClass('hide');
+                    $('#pageload').removeClass('hide');
+                }, 1000);
+
+                // media初始化
+                car2.media_init();
+                // 插件加载
+                car2.plugin();
+                var _height = $(window).height();
+                $("#pageload").height(_height);
+                $('.p-ct').height(_height);
+                $('.page').height(_height);
+            }, time);
         });
     }
 };

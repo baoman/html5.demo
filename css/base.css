@@ -1,21 +1,15 @@
 /**
 * 单页面page模块
-* -m-page
+* -page
 */
-.m-page {
+.page {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
 }
 
-.m-fengye {
-    background-image: url('../images/pic-bg.jpg');
-    background-position: 50% 50%;
-    background-size: cover;
-}
-
-.m-fengye-con {
+.page-1 .content {
     position: absolute;
     width: 84%;
     left: 8%;
@@ -28,16 +22,24 @@
     border-radius: 5px;
 }
 
+/*
+* loading
+* #load
+*/
+#load {
+    width: 100%;
+    text-align: center
+}
+
 .marry-user {
-    color: #000;
+    color: #FF7AAB;
     font-size: 2em;
-    margin-top: 40px;
 }
 
 .marry-txt {
     font-size: 1.5rem;
-    margin-top: 30px;
-    color: #FF7AAB;
+    margin-top: 20px;
+    color: #000;
 }
 
 .marry-desc {
@@ -51,10 +53,9 @@
     color: #FF7AAB;
     font-family: "隶书";
     font-size: 65px;
-    display: inline-block;
     width: 60px;
     height: 60px;
-    margin: 0 10px;
+    margin: 100px auto 10px auto;
     -webkit-animation: rotateplane 1.2s infinite ease-in-out;
     -webkit-animation-direction: alternate;
 
@@ -72,9 +73,22 @@
     }
 
 }
+
+#pageload {
+    position: relative;
+}
+
+.p-ct {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
 .page-2 {
     background: #ABB395;
 }
+
 .txt {
     position: absolute;
     width: 80%;
@@ -85,6 +99,7 @@
     line-height: 1;
     font-size: 1.25rem;
 }
+
 #img {
     height: 100%;
 }

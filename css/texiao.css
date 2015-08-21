@@ -4,33 +4,6 @@
     opacity: 1;
     -webkit-animation: txt-animation0 1s;
 }
-.txt-animation1 {
-    top: 45%;
-    left: 10%;
-    opacity: 1;
-    -webkit-animation: txt-animation1 1s ease-in;
-}
-.texiao1 {
-    position: absolute;
-    width: 100%;
-    top: 0;
-    left: 0;
-    -webkit-animation: diyizhang 2s linear;
-}
-
-.texiao4 {
-    -webkit-animation: disizhang 1s linear;
-    -webkit-transition: disizhang .7s linear;
-}
-
-.texiao4 {
-    position: absolute;
-    top: 4%;
-    width: 100%;
-    left: 10%;
-    text-align: left;
-}
-
 @-webkit-keyframes txt-animation0 {
     0% {
         left: 0;
@@ -40,6 +13,12 @@
         left: 10%;
         opacity: 1;
     }
+}
+.txt-animation1 {
+    top: 45%;
+    left: 10%;
+    opacity: 1;
+    -webkit-animation: txt-animation1 1s ease-in;
 }
 @-webkit-keyframes txt-animation1 {
     0% {
@@ -51,8 +30,15 @@
         opacity: 1;
     }
 }
+.texiao1 {
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    -webkit-animation: texiao1 1.5s linear;
+}
 
-@-webkit-keyframes diyizhang {
+@-webkit-keyframes texiao1 {
     0% {
         top: 0;
         left: 50%;
@@ -90,26 +76,6 @@
         border-radius: 0;
     }
 }
-
-@-webkit-keyframes disizhang {
-    0% {
-        right: 0%;
-        opacity: 0; /*初始状态 透明度为0*/
-    }
-    50% {
-        right: 2%;
-        opacity: 0; /*初始状态 透明度为0*/
-    }
-    85% {
-        right: 5%;
-        opacity: 1; /*结尾状态 透明度为1*/
-    }
-    100% {
-        right: 0;
-        opacity: 1; /*结尾状态 透明度为1*/
-    }
-}
-
 
 /*图片轮播*/
 .pic01 {
